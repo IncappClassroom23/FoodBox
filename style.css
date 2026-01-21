@@ -1,0 +1,20 @@
+body{
+    overflow-x: hidden;
+}
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url("assets/bg.jpg");
+    background-size: cover;
+    background-position: top;
+    padding: 20px;
+}
+header>nav{
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 10px;
+}
+#items>div>div{
+    background-color: white;
+    transition: 1s;
+}
+#items>div>div:hover{
+    transform: scale(1.07);
+}

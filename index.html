@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBox</title>
+    <link rel="shortcut icon" href="assets/foodbox-logo.png" type="image/x-icon">
+    <!-- Bootstrap 5.3.8 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+          <img src="assets/foodbox-logo.png" height="25px" alt="">
+          <b class="text-danger">Food</b><span class="text-primary">BOX</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+        <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">
+              <i class="fa-solid fa-house"></i> Home
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recipes">
+              <i class="fa-solid fa-bowl-rice"></i> Recipes 
+            </a>
+          </li>
+        </ul>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#contactModal">Get In Touch</button>
+        <!-- Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Get In Touch</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form name="google-sheet">
+                  <div class="mb-3">
+                    <input name="Name" type="text" pattern="[a-zA-Z ]+" maxlength="20" minlength="2" required placeholder="Your Name" class="form-control" id="name" aria-describedby="nameHelp">
+                  </div>
+                  <div class="mb-3">
+                    <input name="Phone" type="tel" pattern="[0-9]+" maxlength="10" minlength="10" required placeholder="Your Phone" class="form-control" id="phone" aria-describedby="phoneHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your data with anyone else.</div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <h1 class="text-center text-white m-5">Best Food in your city.</h1>
+  </header>
+  <section class="bg-light text-center p-4">
+    <h2 class="my-4">Lorem ipsum dolor sit amet.</h2>
+    <div class="row" id="items">
+        <div class="col-sm">
+          <div class="p-4 my-3 shadow rounded-4">
+            <img class="rounded-circle shadow mb-4" height="150px" src="assets/img1.jpg" alt="">
+            <h4>Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <span class="badge text-bg-danger">&#8377; 1399/-</span>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="p-4 my-3 shadow rounded-4">
+            <img class="rounded-circle shadow mb-4" height="150px" src="assets/img2.jpg" alt="">
+            <h4>Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <span class="badge text-bg-danger">&#8377; 1399/-</span>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="p-4 my-3 shadow rounded-4">
+            <img class="rounded-circle shadow mb-4" height="150px" src="assets/img3.jpg" alt="">
+            <h4>Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <span class="badge text-bg-danger">&#8377; 1399/-</span>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="p-4 my-3 shadow rounded-4">
+            <img class="rounded-circle shadow mb-4" height="150px" src="assets/img4.jpg" alt="">
+            <h4>Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <span class="badge text-bg-danger">&#8377; 1399/-</span>
+          </div>
+        </div>
+    </div>
+    <button class="mt-5 btn btn-dark">More &rarr;</button>
+  </section>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/banner1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/banner2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/banner3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/banner4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Fourth slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/banner5.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Fifth slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <section class="bg-warning p-5">
+      <div class="row align-items-center">
+        <div class="col-7">
+          <h4>Lorem ipsum dolor sit.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="row text-start">
+              <div class="col border-dark border-start m-1">
+                  <i class="fa-solid fa-bottle-droplet fa-3x"></i>
+                  <p><small>Lorem</small></p>
+              </div>
+              <div class="col border-dark border-start m-1">
+                  <i class="fa-solid fa-fish-fins fa-3x"></i>
+                  <p><small>Lorem</small></p>
+              </div>
+              <div class="col border-dark border-start m-1">
+                  <i class="fa-solid fa-pizza-slice fa-3x"></i>
+                  <p><small>Lorem</small></p>
+              </div>
+              <div class="col border-dark border-start m-1">
+                  <i class="fa-solid fa-mug-hot fa-2x"></i>
+                  <p><small>Lorem</small></p>
+              </div>
+          </div>
+          <button class="btn btn-dark mt-4" data-bs-toggle="modal" data-bs-target="#contactModal">Get In Touch</button>
+        </div>
+        <div class="col-5">
+            <img class="img-fluid" src="assets/food.jpg" alt="">
+        </div>
+      </div>
+  </section>
+  <section class="container py-5" id="recipes">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item bg-primary-subtle">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Sahi Paneer -Recipe
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-primary-subtle">
+          <h2 class="accordion-header">
+            <button class="accordion-button  bg-primary text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Butter Chicken -Recipe
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-primary-subtle">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-primary text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Palak Paneer -Recipe
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer class="bg-dark p-5 text-center text-white">
+      <p>
+        Follow us: 
+        <a href="https://www.instagram.com/incapp.in" class="text-white">
+          <i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/incapp" class="text-white">
+          <i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/incapp" class="text-white">
+          <i class="fa-brands fa-youtube"></i></a>
+      </p>
+      <p>Design & Develop by INCAPP &copy; Rights Reserved.</p>
+  </footer>
+</body>
+<!-- Bootstrap 5.3.8 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js" integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Font Awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Custom Js -->
+<script src="script.js"></script>
+</html>
